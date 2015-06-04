@@ -1,4 +1,4 @@
-django-toolbelt==1.8.1
+django-toolbelt==0.0.1
 gunicorn==19.3.0
 psycopg2==2.6
 SQLAlchemy==1.0.4
