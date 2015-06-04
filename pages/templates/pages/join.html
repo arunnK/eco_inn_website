@@ -1,0 +1,71 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Join- Innovation Ecosystem 
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/pages/css/style.css" media="screen" type="text/css" />
+{% endblock %}
+
+
+{% block content %}
+
+	<div id="contents">
+		<div class="section">
+			<h1 align="center">Join us</h1>
+			<p>
+				If you want to be a part of this ecosystem, please fill in this form. We will surely assist you in all the ways we can.
+			</p>	
+			<form action="/" method="post" class="message">
+				{% csrf_token %}
+				{{ form.non_field_errors }}
+				<div class="fieldWrapper">
+    			{{ form.name.errors }}
+    			<label for="{{ form.name.id_for_label }}"></label>
+    			{{ form.name }}
+				</div><br />
+				<div>
+				{{ form.rollno.errors }}
+  				 <label for="{{ form.rollno.id_for_label }}" ></label>
+   			     {{ form.rollno }}
+				</div><br />
+				<div class="fieldWrapper">
+    			{{ form.branch.errors }}
+    			<label for="{{ form.branch.id_for_label }}"></label>
+    			{{ form.branch }}
+				</div><br />
+				<div class="fieldWrapper">
+   				 {{ form.message.errors }}
+   				 <label for="{{ form.message.id_for_label }}">Why do you want to join ?</label>
+   				 {{ form.message }}
+				</div>
+				<div>
+				{{ form.mobno.errors }}
+  				 <label for="{{ form.mobno.id_for_label }}" ></label>
+   			     {{ form.mobno }}
+				</div><br />
+				<div class="fieldWrapper">
+    			{{ form.email.errors }}
+    			<label for="{{ form.email.id_for_label }}"></label>
+    			{{ form.email }}
+				</div><br />
+				<div class="fieldWrapper">
+   				 {{ form.captcha.errors }}
+   				 <label for="{{ form.message.id_for_label }}"></label>
+   				 {{ form.captcha }}
+				</div><br />
+				<input type="submit" value="Send"/>
+			</form>
+		</div>
+		<div class="section contact">
+			<p>
+			   For further details or any query <a href="/contact"> Contact us</a>
+			</p>
+			<p>
+				Or you can visit us at: <span>Innovation Ecosystem<br><span>Ground Floor, Central Block (Opp. Admin Block), NIT Hamirpur, HP-177005</span>
+			</p>
+		</div>-
+	</div>
+
+{% endblock %}

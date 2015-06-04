@@ -1,0 +1,41 @@
+	{% extends "blog/base.html" %}
+
+{% block title %}
+Post-Innovation Ecosystem 
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/blog/css/style.css" media="screen" type="text/css" />
+{% endblock %}
+
+
+{% block content %}
+
+	<div id="contents">
+		<div class="post">
+			<div class="date">
+				<p>
+					<span>04</span>
+					2015
+				</p>
+			</div>
+			<h1>Energy Efficient Smart Rooms<span class="author">Devender Singh Bhakuni Prriyasha Parmar Priyanka Mourya Vivek Maturu Pavan Datta April 2015</span></h1>
+			<p> 
+				<!--<img src="../../static/blog/images/post41.png" alt="Img" height="500" width="750"><br /><br />-->
+				It is common knowledge that a majority of people forget to turn off the lighting and other electrical and electronic devices after vacating a room.This malpractice leads to the wastage of a lot of electricity and as a result, money.
+			</p>
+			<p>
+				This project has been prototyped as a functional energy saving electronic device which will automatically cut off power to the room if the occupancy in the room is zero. In addition to this we can even control the speed of fan according to the temperature variation.We may increase or decrease speed of the fan according to temperature by using temperature sensor. After attaining a specific value (say 25C) speed of fan decreases.
+			</p>
+			<p>
+				The design of the circuit is fairly simple. The main power line to the room is diverted through the circuit before powering the electrical devices in the room.A human presence detector circuit keep track of the number of people in the room and their output signal is fed to the Arduino board through Serial Analog input channels. A Liquid Crystal Display interfaced with the Arduino Board dynamically displays the number of people in the room. Once the number of people in the room reaches 0 power automatically cuts off.
+			</p>
+			<p>
+				The circuit effectively reduces the power consumption by automatically switching off power. It has a variety of practical purposes such as in classrooms, homes, and offices etc. where there is a tendency of people forgetting to switch off lights
+			</p>
+			
+			<span><a href="/blog" class="more">Back to News</a></span>
+		</div>
+	</div>
+	
+	{% endblock %}

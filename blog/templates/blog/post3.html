@@ -1,0 +1,52 @@
+{% extends "blog/base.html" %}
+
+
+{% block title %}
+Post-Innovation Ecosystem 
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/blog/css/style.css" media="screen" type="text/css" />
+{% endblock %}
+
+
+{% block content %}
+
+	<div id="contents">
+		<div class="post">
+			<div class="date">
+				<p>
+					<span>04</span>
+					2015
+				</p>
+			</div>
+			<h1>Wireless switch board<span class="author">Kumar Vishal Rai April 2015</span></h1>
+			<p align="justify"> 
+				<img src="../../static/blog/images/post3.png" alt="Img" height="500" width="350" align="left" hspace="10"><br /><br />
+				<b>Problem addressed :-</b><br />
+				The walls of the building constructed with various switches for the light and fan are an obstruction to use the clear wall surface of the room. Almirahs are sometimes an obstruction to operate the switches conveniently / are to be placed as per the switch boards in the wall.  This generates the need of some remote systems through which one can control the appliances and the switch board can be placed just as the 1ft above the wall instead of 4.5ft. 
+			</p>
+			<p align="justify">
+				<b>Product :-</b><br />
+				This is a combination of an electronic device and an Android Smartphone application that can access the household appliances anywhere in your house. To operate one has to turn on Bluetooth of the phone and connect the device. Open the application and all the connected appliances of your home are at your fingertips.
+			</p>
+			<p align="justify">
+				<b>Technical Specifications :-</b><br />
+1. Components Used: - ARDUINO Uno R3, XBee S2 Module, Bluetooth module, Relays, Installation.<br />
+2. Device Range- 10m line of sight from the device. (May vary according to Bluetooth Range of your phone).
+			</p>
+			<p align="justify">
+				<b>ADVANTAGES THIS SYTEM :</b><br /><br />  
+1. Requirements of Non- Heating/ Cooling electrical switch boards are removed. <br />  
+2. Reduces electrical losses. <br />  
+3. Compact in size as compared to other electrical devices and can be installed anywhere in the house.
+			</p>
+			<p align="justify">
+			<b>Cost: -</b> Rs. 4,000/- (Might vary according to number of switch boards to be controlled.)<br />
+<b>Mass Fabrication cost-</b> Rs. 1,000/-	
+			</p>
+			<span><a href="/blog" class="more">Back to News</a></span>
+		</div>
+	</div>
+	
+	{% endblock %}
