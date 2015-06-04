@@ -50,7 +50,7 @@ def join(request):
 			message = form.cleaned_data['message']
 			email = form.cleaned_data['email']
 			recipients = ['innovationecosystem.nith@gmail.com']
-			send_mail('New Applicant', name+'\n'+roll+'\n'+mobno+'\n'+branch+'\n'+message,email, recipients)
+			send_mail('New Applicant', name+'\n'+rollno+'\n'+mobno+'\n'+branch+'\n'+message,email, recipients)
 	else:
 		form = JoinForm() # An unbound form
 	return render(request, 'pages/join.html', {
