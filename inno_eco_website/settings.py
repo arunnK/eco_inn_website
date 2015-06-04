@@ -20,9 +20,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECRET_KEY = 'mw*o5z+h5c_=%&k&vm&m1i_m+s$h7@1r%#kthifa&6v7@a-np+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
