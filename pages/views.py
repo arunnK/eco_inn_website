@@ -32,6 +32,7 @@ def contact(request):
 			sender = form.cleaned_data['sender']
 			recipients = ['innovationecosystem.nith@gmail.com']
 			send_mail(subject, message+'\n'+name, sender, recipients)
+			return render(request, 'pages/home.html');
 	else:
 		form = ContactForm() # An unbound form
 	return render(request, 'pages/contact.html', {
@@ -51,6 +52,7 @@ def join(request):
 			email = form.cleaned_data['email']
 			recipients = ['innovationecosystem.nith@gmail.com']
 			send_mail('New Applicant '+name, 'Name -  '+name+'\n'+'Rollno -   '+rollno+'\n'+'Mobile -   '+mobno+'\n'+'Branch -   '+branch+'\n'+'Message -   '+message+'\n'+email,email, recipients)
+			return render(request, 'pages/home.html');
 	else:
 		form = JoinForm() # An unbound form
 	return render(request, 'pages/join.html', {
