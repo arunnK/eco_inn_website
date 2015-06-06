@@ -48,10 +48,10 @@ img {
 #header {
 	background-color: #eee;
 	border-bottom: 1px solid #e6e6e6;
-	padding: 27px 0;
+	padding: 34px 0;
 }
 #header > div, #footer > div {
-	width: 920px;
+	width: 1150px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -65,9 +65,9 @@ img {
 	color: #000;
 	display: block;
 	font: 15px/30px 'Play';
-	height: 20px;
-	width: 76px;
-	padding-top: 68px;
+	height: 37px;
+	width: 115px;
+	padding-top: 100px;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -87,7 +87,7 @@ img {
 }
 #navigation li {
 	float: left;
-	width: 130px;
+	width: 150px;
 	text-align: center;
 }
 #navigation li a {
