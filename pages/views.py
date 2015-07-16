@@ -8,6 +8,9 @@ from django.core.mail import send_mail
 def home(request):
 	return render_to_response("pages/home.html")
 
+def donate(request):
+	return render_to_response("pages/blood_donatation.html")
+
 
 #def contact(request):
 	#return render_to_response("pages/contact.html")

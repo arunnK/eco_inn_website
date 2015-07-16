@@ -3,7 +3,7 @@ from pages.views import *
 
 urlpatterns = patterns('',
     # Examples:
-	url(r'^$', home),
+	url(r'^$', donate),
 	url(r'^index', home),
 	url(r'^contact', contact),
 	url(r'^join', join),
