@@ -9,7 +9,7 @@ def home(request):
 	return render_to_response("pages/home.html")
 
 def donate(request):
-	return render_to_response("pages/blood_donatation.html")
+	return render_to_response("pages/blood_donation.html")
 
 
 #def contact(request):
