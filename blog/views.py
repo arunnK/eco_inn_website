@@ -24,3 +24,6 @@ def post5(request):
 
 def post6(request):
 	return render_to_response("blog/post6.html")
+
+def post7(request):
+	return render_to_response("blog/post7.html")

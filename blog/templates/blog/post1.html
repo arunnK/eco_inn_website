@@ -1,45 +1,43 @@
-	{% extends "blog/base.html" %}
+{% extends "blog/post.html" %}
 
 {% block title %}
-Post-Innovation Ecosystem 
+Solar Food Dryer 
 {% endblock %}
 
-{% block css %}
-<link rel="stylesheet" href="/static/blog/css/style.css" media="screen" type="text/css" />
+{% block month %}
+04
+{% endblock %}
+
+{% block year %}
+2015
+{% endblock %}
+
+{% block post_title %}
+Solar Food Dryer
+{% endblock %}
+
+{% block author_date %}
+Shivam Chawla, Kuldeep Kushwaha, Ravi Saukta, Rakesh Chaudhary, Vicky Garg, April 2015
 {% endblock %}
 
 
-{% block content %}
-
-	<div id="contents">
-		<div class="post">
-			<div class="date">
-				<p>
-					<span>04</span>
-					2015
-				</p>
-			</div>
-			<h1>Solar Food Dryer<span class="author">Shivam Chawla, Kuldeep Kushwaha, Ravi Saukta, Rakesh Chaudhary, Vicky Garg, April 2015</span></h1>
-			<p> 
+{% block post %}
+			<p align="justify"> 
 				<img src="../../static/blog/images/post12.png" alt="Img" height="500" width="750"><br /><br />
 				Himachal Pradesh is very famous for its Apricots and Apples. Dried Apricots and Apples make a great product for the market and are in great demand as healthy snacks by health conscious people and others as well for their great taste. 
 			</p>
-			<p>
+			<p align="justify">
 				Apricot dehydration is a very costly process as it consumes a lot of energy for drying. Small scale Industrialists use electric dryer of 12.5 kW for each 250 kg drying while Cottage workers use direct sun drying for producing candies. But there are problems with each drying technique. The electric dryers consume a lot of energy of dehydration of each batch while direct sun drying causes discoloration of the Apricots and Apples and also result in loss of various nutrients.
 			</p>
-			<p>
+			<p align="justify">
 				So as per their needs we designed and fabricated a solar food dryer for them which can meet the requirements of both industries and cottage workers. It is a small endeavor to help them. It uses a small electric power for the pump and air blower which have very small power requirement of 211W and it can be easily supplied with an inverter in case of power cuts. Moreover it is not open to atmosphere and direct radiations as food products are kept inside the drying chamber thus no question of contamination or any other quality loss. Thus our solar dryer is able to serve the purpose of both industrialists as well as local people successfully.
 			</p>
-			<p>
+			<p align="justify">
 				It has facility for the storage of heat for 18 hours so it can work 24X7. Also, it has an electric backup of 1 kW heater for every 25 kg capacity so that it may work even in cloudy and rainy days. It has automatic temperature controller and automatic electric switching system. 
 			</p>
-			<p>
+			<p align="justify">
 				The pay back period of the dehydrator is only 1.5 years so it economically viable as well.
 
 			</p>
-			
-			<span><a href="/blog" class="more">Back to Blog</a></span>
-		</div>
-	</div>
 	
-	{% endblock %}
+{% endblock %}

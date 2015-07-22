@@ -1,25 +1,26 @@
-	{% extends "blog/base.html" %}
+{% extends "blog/post.html" %}
 
-{% block title %}
-Post-Innovation Ecosystem 
+{% block title %} 
+Automatic System to Reduce Power Consumption
 {% endblock %}
 
-{% block css %}
-<link rel="stylesheet" href="/static/blog/css/style.css" media="screen" type="text/css" />
+{% block month %}
+04
 {% endblock %}
 
+{% block year %}
+2015
+{% endblock %}
 
-{% block content %}
+{% block post_title %}
+Automatic System to Reduce Power Consumption
+{% endblock %}
 
-	<div id="contents">
-		<div class="post">
-			<div class="date">
-				<p>
-					<span>04</span>
-					2015
-				</p>
-			</div>
-			<h1>Automatic System to Reduce Power Consumption<span class="author">Parijat Kumar, Yatin Sharma, Roop Singh, Navjot Singh, April 2015</span></h1>
+{% block author_date %}
+Parijat Kumar, Yatin Sharma, Roop Singh, Navjot Singh, April 2015
+{% endblock %}
+
+{% block post %}
 			<p> 
 				<!--<img src="../../static/blog/images/post41.png" alt="Img" height="500" width="750"><br /><br />-->
 				People usually forget to switch off electrical appliances like lights, fans etc in their homes. Some time they feel lazy to do so if switches are far away. So a lot of energy is wasted in this course. We want to develop an automated electronic circuitry to switch off those electrical appliances by sensing the count of individuals in a room. There are some electrical appliances which are necessary to get switched on when someone enters the room like fan and tube light. And in hostels, tube light and fans are the only two appliances present in every room.
@@ -37,9 +38,4 @@ Post-Innovation Ecosystem
 6. It can be helpful to the farmers as well. For switching ON a tubewell in the fields, one has to go to the fields. But with the help this device user can switch on/off the tubewell from the home itself.<br />
 7. This device can be installed in malls, seminar halls where many equipments has to be switched on/off simultaneously. 
 			</p>
-			
-			<span><a href="/blog" class="more">Back to Blog</a></span>
-		</div>
-	</div>
-	
-	{% endblock %}
+{% endblock %}

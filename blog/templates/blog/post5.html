@@ -1,25 +1,26 @@
-	{% extends "blog/base.html" %}
+{% extends "blog/post.html" %}
 
-{% block title %}
-Post-Innovation Ecosystem 
+{% block title %} 
+Auto Cooling Chair
 {% endblock %}
 
-{% block css %}
-<link rel="stylesheet" href="/static/blog/css/style.css" media="screen" type="text/css" />
+{% block month %}
+04
 {% endblock %}
 
+{% block year %}
+2015
+{% endblock %}
 
-{% block content %}
+{% block post_title %}
+Auto Cooling Chair
+{% endblock %}
 
-	<div id="contents">
-		<div class="post">
-			<div class="date">
-				<p>
-					<span>04</span>
-					2015
-				</p>
-			</div>
-			<h1>Auto Cooling Chair<span class="author">Raman Kant, Rachit Upadhyay, April 2015</span></h1>
+{% block author_date %}
+Raman Kant, Rachit Upadhyay, April 2015
+{% endblock %}
+
+{% block post %}
 			<p align="justify"> 
 				<img src="../../static/blog/images/post52.png" alt="Img" height="500" width="350" align="left" hspace="10"><br /><br />
 
@@ -32,10 +33,6 @@ Post-Innovation Ecosystem
 				To overcome these problems Auto Cooling Chair comes to play its role.This chair is quite similar to the other  office chairs but differs  in  its features,that the cooling mechanism of this chair avoids the sweating and the the person sitting feels fresh for a long and the problems like skin rashes due to sweating are avoided. The cooling mechanism used is very quite and smooth. A major point which  comes to mind  is the power consuption of that chair,and in this case too , you can have a sigh of relief because its total power consuption  is only 4 units per month. 
 			</p>
 			<p align="justify">
-				The price of this chair will be the same as the normal office chairs.So it will be a wise decision to choose comfort on same price.	</p>
-			
-			<span><a href="/blog" class="more">Back to Blog</a></span>
-		</div>
-	</div>
-	
-	{% endblock %}
+				The price of this chair will be the same as the normal office chairs.So it will be a wise decision to choose comfort on same price.	
+			</p>	
+{% endblock %}
