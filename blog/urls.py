@@ -11,4 +11,5 @@ urlpatterns = patterns('',
 	url(r'^post5', post5),
 	url(r'^post6', post6),
 	url(r'^post7', post7),
+	url(r'^post8', post8),
 )
