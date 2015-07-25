@@ -17,7 +17,7 @@ Sign up
 			<p>
 				If you want to be a beta tester for this app, please fill in this form. We will add you in the list of Beta Testers.
 			</p>	
-			<form action="/join" method="post" class="message">
+			<form action="/signup" method="post" class="message">
 				{% csrf_token %}
 				{{ form.non_field_errors }}
 				<div class="fieldWrapper">
