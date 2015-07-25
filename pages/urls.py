@@ -3,11 +3,12 @@ from pages.views import *
 
 urlpatterns = patterns('',
     # Examples:
-	url(r'^$', donate),
+	url(r'^$', edzooBeta),
 	url(r'^index', home),
 	url(r'^contact', contact),
 	url(r'^join', join),
 	url(r'^about', about),
 	url(r'^activities', activities),
 	url(r'^ps', ps),
+	url(r'^signup', signup),
 )

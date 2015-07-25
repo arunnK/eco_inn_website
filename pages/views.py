@@ -1,22 +1,18 @@
 from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
-from .forms import ContactForm,JoinForm
+from .forms import ContactForm,JoinForm,SignUpForm
 from django.core.mail import send_mail
 # Create your views here.
 
 def home(request):
 	return render_to_response("pages/home.html")
 
-def donate(request):
-	return render_to_response("pages/blood_donation.html")
-
-
-#def contact(request):
-	#return render_to_response("pages/contact.html")
-
 def about(request):
 	return render_to_response("pages/about.html")
+
+def edzooBeta(request):
+	return render_to_response("pages/edzoo_beta.html")
 
 def activities(request):
 	return render_to_response("pages/activities.html")
@@ -59,5 +55,21 @@ def join(request):
 	else:
 		form = JoinForm() # An unbound form
 	return render(request, 'pages/join.html', {
+	'form': form,
+	})
+
+def signup(request):
+	if request.method == 'POST': # If the form has been submitted...
+	# ContactForm was defined in the previous section
+		form = SignUpForm(request.POST) # A form bound to the POST data
+		if form.is_valid(): # All validation rules pass
+			name =  form.cleaned_data['name']
+			email = form.cleaned_data['email']
+			recipients = ['badapps.inc@gmail.com']
+			send_mail('New Applicant '+name, 'Name -  '+name+'\n'+'\n'+email,email, recipients)
+			return render(request, 'pages/home.html');
+	else:
+		form = SignUpForm() # An unbound form
+	return render(request, 'pages/signup.html', {
 	'form': form,
 	})

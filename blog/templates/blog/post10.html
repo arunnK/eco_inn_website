@@ -1,0 +1,58 @@
+{% extends "blog/post.html" %}
+
+{% block title %} 
+Wireless Irrigation System
+{% endblock %}
+
+{% block month %}
+04
+{% endblock %}
+
+{% block year %}
+2015
+{% endblock %}
+
+{% block post_title %}
+Wireless Irrigation System
+{% endblock %}
+
+{% block author_date %}
+Navjot Singh ,Rishab Sangwan ,Kanishk Dhyani ,Vijay Bhati ,Parijat Mishra,Dr. R.K. Jariyal April 2015
+{% endblock %}
+
+{% block post %}
+<h1 style="color: #5c7a99;">1. Introduction</h1>
+<p style="text-align: justify;">       With the ground water table exhausting in the rural india due to excessive pressure on ground water table by agricultural irrigation, there is a growing need to closely and effectively monitor the irrigation process . Every year nearly 2 lakh litres of ground water is wasted due to over or improper irrigation of agricultural lands . To overcome this problem our team has developed a handy and extremely cheap wireless module for the better monitoring and convenience of the large farmers.Apart from this we also aim to develop a system through which farmers can irrigate their fields 24 *7 and optionaly run their motors on single phase through same wireless module during non-availability of 3 phase supply.</p>
+
+
+<hr />
+
+<h1 style="color: #5c7a99;">2. Product</h1>
+<p align="justify">Our aim is to directly interface the the 3 phase induction motor starter with a mobile phone of the user using GSM module and DTMF board centrally controlled by a ATMEGA 16 microcontroller as follows:</p>
+<ol>
+	<li>A call is placed to GSM module using a mobile phone (available with the farmer already).</li>
+	<li>Now this GSM module is connected to a DTMF module as shown</li>
+	<p align="justify">This module converts the frequency of sound corresponding to each no. and gives instructions input to ATMEGA 16 microntroller which controls the 3/1 phase supply to the motor to perform various operations as under:</p>
+	<ol>
+		<li>turn on motor.</li>
+		<li>turn on motor for specific period.</li>
+		<li>turn off the motor.</li>
+		<li>run motor on single phase.</li>
+		<li>un the motor on 3 phase.</li>
+	</ol>
+</ol>
+
+<h1 style="color: #5c7a99;">3. Specifications</h1>
+<p style="text-align: justify;">Components used; ATMEGA 16 compatible GSM module,DTMF board,ATMEGA 16 microcontroller.</p>
+
+<h1 style="color: #5c7a99;">4. Advantages:</h1>
+<ol>
+	<li>Affordable @ Rs 1000 on mass production.</li>
+	<li> Range limited by the signal strength of mobile service company. nearly infinite range of operation.</li>
+	<li>Irrigation is possible 24x7.</li>
+	<li>Robust and can work in harsh condition.</li>
+	<li>Can also be superseded manually under emergency conditions or failure.</li>
+</ol>
+
+<p style="text-align: center;">***************************</p>
+{% endblock %}

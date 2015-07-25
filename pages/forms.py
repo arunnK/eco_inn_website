@@ -16,5 +16,8 @@ class JoinForm(forms.Form):
 	message = forms.CharField(widget=forms.Textarea(attrs={'default': 'NIL'}))
 	email = forms.EmailField(widget=forms.TextInput(attrs={'value': 'Email'}))
 	captcha = ReCaptchaField(attrs={'theme' : 'clean'})
-	
-	
+
+class SignUpForm(forms.Form):
+	name = forms.CharField(widget=forms.TextInput(attrs={'value': 'Name'}))
+	email = forms.EmailField(widget=forms.TextInput(attrs={'value': 'Email'}))
+	captcha = ReCaptchaField(attrs={'theme' : 'clean'})
