@@ -20,6 +20,8 @@ def activities(request):
 def ps(request):
 	return render_to_response("pages/problemstatements.html")
 
+#changes
+
 def contact(request):
 	if request.method == 'POST': # If the form has been submitted...
 	# ContactForm was defined in the previous section
