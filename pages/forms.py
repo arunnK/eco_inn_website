@@ -16,7 +16,7 @@ class JoinForm(forms.Form):
 	branch = forms.CharField(widget=forms.TextInput(attrs={'size' : '30'}))
 	message = forms.CharField(widget=forms.Textarea(attrs={'size' : '200'}))
 	email = forms.EmailField(widget=forms.TextInput())
-	#captcha = ReCaptchaField(attrs={'theme' : 'clean'})
+	captcha = ReCaptchaField(attrs={'theme' : 'clean'})
 
 class SignUpForm(forms.Form):
 	name = forms.CharField(widget=forms.TextInput(attrs={'value': 'Name'}))
