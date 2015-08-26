@@ -1,7 +1,7 @@
 {% extends "pages/base.html" %}
 
 {% block title %}
-Join- Innovation Ecosystem 
+Join- Innovation Ecosystem
 {% endblock %}
 
 {% block css %}
@@ -16,24 +16,24 @@ Join- Innovation Ecosystem
 			<h1 align="center">Join us</h1>
 			<p>
 				If you want to be a part of this ecosystem, please fill in this form. We will surely assist you in all the ways we can.
-			</p>	
+			</p>
 			<form action="/join" method="post" class="message">
 				{% csrf_token %}
 				{{ form.non_field_errors }}
 				<div class="fieldWrapper">
     			{{ form.name.errors }}
     			<label for="{{ form.name.id_for_label }}"></label>
-    			{{ form.name }}
+    			<input type="text" id="name" name="name"  placeholder="Name">
 				</div><br />
 				<div>
 				{{ form.rollno.errors }}
   				 <label for="{{ form.rollno.id_for_label }}" ></label>
-   			     {{ form.rollno }}
+   			     <input type="text" id="rollno" name="rollno"  placeholder="Roll no">
 				</div><br />
 				<div class="fieldWrapper">
     			{{ form.branch.errors }}
     			<label for="{{ form.branch.id_for_label }}"></label>
-    			{{ form.branch }}
+    			<input type="text" id="branch" name="branch"  placeholder="Branch">
 				</div><br />
 				<div class="fieldWrapper">
    				 {{ form.message.errors }}
@@ -43,12 +43,12 @@ Join- Innovation Ecosystem
 				<div>
 				{{ form.mobno.errors }}
   				 <label for="{{ form.mobno.id_for_label }}" ></label>
-   			     {{ form.mobno }}
+   			     <input type="text" id="mobno" name="mobno"  placeholder="Mobile">
 				</div><br />
 				<div class="fieldWrapper">
     			{{ form.email.errors }}
     			<label for="{{ form.email.id_for_label }}"></label>
-    			{{ form.email }}
+    			<input type="text" id="email" name="email"  placeholder="Email">
 				</div><br />
 				<div class="fieldWrapper">
    				 {{ form.captcha.errors }}

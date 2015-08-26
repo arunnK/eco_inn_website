@@ -16,19 +16,19 @@ Sign up
 			<h1 align="center">Sign Up for Beta Testing</h1>
 			<p>
 				If you want to be a beta tester for this app, please fill in this form. We will add you in the list of Beta Testers.
-			</p>	
+			</p>
 			<form action="/signup" method="post" class="message">
 				{% csrf_token %}
 				{{ form.non_field_errors }}
 				<div class="fieldWrapper">
     			{{ form.name.errors }}
     			<label for="{{ form.name.id_for_label }}"></label>
-    			{{ form.name }}
+    			<input type="text" id="name" name="name"  placeholder="Name">
 				</div><br />
 				<div class="fieldWrapper">
     			{{ form.email.errors }}
     			<label for="{{ form.email.id_for_label }}"></label>
-    			{{ form.email }}
+    			<input type="text" id="email" name="email"  placeholder="Email">
 				</div><br />
 				<div class="fieldWrapper">
    				 {{ form.captcha.errors }}
