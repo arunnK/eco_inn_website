@@ -3,6 +3,7 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from .forms import ContactForm,JoinForm,SignUpForm
 from django.core.mail import send_mail
+from pages.models import Member
 # Create your views here.
 
 def home(request):
@@ -19,8 +20,6 @@ def activities(request):
 
 def ps(request):
 	return render_to_response("pages/problemstatements.html")
-
-#changes
 
 def contact(request):
 	if request.method == 'POST': # If the form has been submitted...
@@ -45,14 +44,17 @@ def join(request):
 	# ContactForm was defined in the previous section
 		form = JoinForm(request.POST) # A form bound to the POST data
 		if form.is_valid(): # All validation rules pass
-			name =  form.cleaned_data['name']
+			first_name =  form.cleaned_data['first_name']
+			last_name =  form.cleaned_data['last_name']
 			rollno =  form.cleaned_data['rollno']
 			mobno =  form.cleaned_data['mobno']
 			branch = form.cleaned_data['branch']
 			message = form.cleaned_data['message']
 			email = form.cleaned_data['email']
-			recipients = ['innovationecosystem.nith@gmail.com']
-			send_mail('New Applicant '+name, 'Name -  '+name+'\n'+'Rollno -   '+rollno+'\n'+'Mobile -   '+mobno+'\n'+'Branch -   '+branch+'\n'+'Message -   '+message+'\n'+email,email, recipients)
+			#recipients = ['innovationecosystem.nith@gmail.com']
+			#send_mail('New Applicant '+name, 'Name -  '+name+'\n'+'Rollno -   '+rollno+'\n'+'Mobile -   '+mobno+'\n'+'Branch -   '+branch+'\n'+'Message -   '+message+'\n'+email,email, recipients)
+			newmember=Member(first_name=first_name,last_name=last_name,roll_no=rollno,mob_no=mobno,branch=branch,message=message,email=email)
+			newmember.save()
 			return render(request, 'pages/home.html');
 	else:
 		form = JoinForm() # An unbound form

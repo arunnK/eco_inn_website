@@ -21,9 +21,14 @@ Join- Innovation Ecosystem
 				{% csrf_token %}
 				{{ form.non_field_errors }}
 				<div class="fieldWrapper">
-    			{{ form.name.errors }}
-    			<label for="{{ form.name.id_for_label }}"></label>
-    			<input type="text" id="name" name="name"  placeholder="Name">
+    			{{ form.first_name.errors }}
+    			<label for="{{ form.first_name.id_for_label }}"></label>
+    			<input type="text" id="first_name" name="first_name"  placeholder="First Name">
+				</div><br />
+				<div class="fieldWrapper">
+    			{{ form.last_name.errors }}
+    			<label for="{{ form.last_name.id_for_label }}"></label>
+    			<input type="text" id="last_name" name="last_name"  placeholder="Last Name">
 				</div><br />
 				<div>
 				{{ form.rollno.errors }}
