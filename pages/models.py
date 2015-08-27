@@ -6,7 +6,7 @@ class Member(models.Model):
     roll_no = models.CharField(max_length=10)
     mob_no = models.CharField(max_length=13)
     branch = models.CharField(max_length=30)
-    message = models.CharField(max_length=200)
+    message = models.CharField(max_length=500)
     email = models.EmailField()
 
 #class problem_bank(models.Model):

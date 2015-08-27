@@ -14,7 +14,7 @@ class JoinForm(forms.Form):
 	rollno = forms.CharField(widget=forms.TextInput(attrs={'size' : '10'}))
 	mobno = forms.CharField(widget=forms.TextInput(attrs={'size' : '13'}))
 	branch = forms.CharField(widget=forms.TextInput(attrs={'size' : '30'}))
-	message = forms.CharField(widget=forms.Textarea(attrs={'size' : '200'}))
+	message = forms.CharField(widget=forms.Textarea(attrs={'size' : '500'}))
 	email = forms.EmailField(widget=forms.TextInput())
 	captcha = ReCaptchaField(attrs={'theme' : 'clean'})
 
