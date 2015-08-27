@@ -9,4 +9,8 @@ class Member(models.Model):
     message = models.CharField(max_length=500)
     email = models.EmailField()
 
-#class problem_bank(models.Model):
+class ProblemBank(models.Model):
+    problem_statement = models.CharField(max_length=5000)
+    submitted_by = models.CharField(max_length=60)
+    mob_no =  models.CharField(max_length=13)
+    email = models.EmailField()

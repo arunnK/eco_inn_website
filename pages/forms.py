@@ -22,3 +22,10 @@ class SignUpForm(forms.Form):
 	name = forms.CharField(widget=forms.TextInput(attrs={'value': 'Name'}))
 	email = forms.EmailField(widget=forms.TextInput(attrs={'value': 'Email'}))
 	captcha = ReCaptchaField(attrs={'theme' : 'clean'})
+
+class ProblemForm(forms.Form):
+	name = forms.CharField(widget=forms.TextInput(attrs={'size' : '60'}))
+	problem = forms.CharField(widget=forms.Textarea(attrs={'size' : '5000'}))
+	mobno = forms.CharField(widget=forms.TextInput(attrs={'size' : '13'}))
+	sender = forms.EmailField(widget=forms.TextInput())
+	captcha = ReCaptchaField(attrs={'theme' : 'clean'})

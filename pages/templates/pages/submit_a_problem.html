@@ -1,0 +1,61 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Submit a Problem - Innovation Ecosystem
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/pages/css/style.css" media="screen" type="text/css" />
+{% endblock %}
+
+
+{% block content %}
+
+	<div id="contents">
+		<div class="section">
+			<h1 align="center">Submit a Problem</h1>
+			<p>
+				Please fill in this form to submit your problem.The problem statemet must be to the point and as detailed as possible(Max length=800 words) We will surely assist you in all the ways we can.
+			</p>
+			<form action="/submit_a_problem" method="post" class="message">
+				{% csrf_token %}
+				{{ form.non_field_errors }}
+				<div class="fieldWrapper">
+    			{{ form.name.errors }}
+    			<label for="{{ form.name.id_for_label }}"></label>
+    			<input type="text" id="name" name="name"  placeholder="Your Name">
+				</div><br />
+				<div class="fieldWrapper">
+   				 {{ form.problem.errors }}
+   				 <label for="{{ form.problem.id_for_label }}">Please type or paste your problem statement here </label>
+   				 {{ form.problem }}
+				</div>
+				<div>
+				{{ form.mobno.errors }}
+  				 <label for="{{ form.mobno.id_for_label }}" ></label>
+   			     <input type="text" id="mobno" name="mobno"  placeholder="Mobile">
+				</div><br />
+				<div class="fieldWrapper">
+    			{{ form.email.errors }}
+    			<label for="{{ form.email.id_for_label }}"></label>
+    			<input type="text" id="email" name="email"  placeholder="Email">
+				</div><br />
+				<div class="fieldWrapper">
+   				 {{ form.captcha.errors }}
+   				 <label for="{{ form.captcha.id_for_label }}"></label>
+   				 {{ form.captcha }}
+				</div><br />
+				<input type="submit" value="Submit"/>
+			</form>
+		</div>
+		<div class="section contact">
+			<p>
+			   For further details or any query <a href="/contact"> Contact us</a>
+			</p>
+			<p>
+				Or you can visit us at: <span>Innovation Ecosystem<br><span>Ground Floor, Central Block (Opp. Admin Block), NIT Hamirpur, HP-177005</span>
+			</p>
+		</div>-
+	</div>
+
+{% endblock %}

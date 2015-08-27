@@ -11,4 +11,5 @@ urlpatterns = patterns('',
 	url(r'^activities', activities),
 	url(r'^ps', ps),
 	url(r'^signup', signup),
+	url(r'^submit_a_problem',submitProblem),
 )
