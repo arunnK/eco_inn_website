@@ -84,7 +84,7 @@ def submitProblem(request):
 		form = ProblemForm(request.POST) # A form bound to the POST data
 		if form.is_valid(): # All validation rules pass
 			name =  form.cleaned_data['name']
-			email = form.cleaned_data['email']
+			email = form.cleaned_data['sender']
 			problem = form.cleaned_data['problem']
 			mobno = form.cleaned_data['mobno']
 			recipients = ['innovationecosystem.nith@gmail.com']
