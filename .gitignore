@@ -1,0 +1,5 @@
+*.pyc
+blog/*.pyc
+pages/*.pyc
+pages/migrations/*.pyc
+
