@@ -21,9 +21,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECRET_KEY = 'mw*o5z+h5c_=%&k&vm&m1i_m+s$h7@1r%#kthifa&6v7@a-np+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_tables2',
     'pages',
     'blog',
     'captcha',
@@ -59,12 +60,32 @@ ROOT_URLCONF = 'inno_eco_website.urls'
 
 WSGI_APPLICATION = 'inno_eco_website.wsgi.application'
 
-
-# Database
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]# Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'iesnith',
+        'USER': 'sbad',
+        'PASSWORD': '123edsaqw',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
 }
 
 # Internationalization

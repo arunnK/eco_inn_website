@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.shortcuts import render_to_response
+from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from .forms import ContactForm,JoinForm,SignUpForm,ProblemForm
 from django.core.mail import send_mail
+from django_tables2   import RequestConfig
+from pages.tables import MemberTable
 from pages.models import Member,ProblemBank
 # Create your views here.
 
@@ -97,3 +100,9 @@ def submitProblem(request):
 	return render(request, 'pages/submit_a_problem.html', {
 	'form': form,
 	})
+
+def members(request):
+	context=RequestContext(request)
+	data = MemberTable(Member.objects.filter(id=True))
+	RequestConfig(request).configure(data)
+	return render_to_response('pages/member.html',{"data":data},context)

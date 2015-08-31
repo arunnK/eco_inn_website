@@ -1,16 +1,17 @@
+{% load render_table from django_tables2 %}
 <!DOCTYPE html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="icon" 
-      type="image/png" 
+		<link rel="icon"
+      type="image/png"
       href="./../static/pages/images/icon.png" />
-		<title>{% block title %} 
+		<title>{% block title %}
 			{% endblock %}</title>
 		<style>
-		
+
 		</style>
 		{% block css %}
-		
+
 		{% endblock%}
 	</head>
 	<body>
@@ -41,12 +42,12 @@
 				</ul>
 			</div>
 		</div>
-		
+
 		<section>
 				{% block content %}
 				{% endblock %}
 		</section>
-		
+
 		<div id="footer">
 		<div class="clearfix">
 			<div id="connect">
@@ -58,11 +59,11 @@
 			<p>
 				Contact Admin : <a href="mailto:admin@iesnith.in">admin@iesnith.in</a><br />
 				© 2015 Innovation Ecosystem National Institute Of Technology Hamirpur. All Rights Reserved.
-				
+
 			</p>
 		</div>
 	</div>
 
-		
+
 	</body>
 </html>
