@@ -103,6 +103,6 @@ def submitProblem(request):
 
 def members(request):
 	context=RequestContext(request)
-	data = MemberTable(Member.objects.filter(id=True))
+	data = MemberTable(Member.objects.all())
 	RequestConfig(request).configure(data)
 	return render_to_response('pages/member.html',{"data":data},context)
